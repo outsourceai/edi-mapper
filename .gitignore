@@ -1,0 +1,50 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.class
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local Streamlit configuration
+.streamlit/secrets.toml
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+# Virtual environment
+edi-env/
+venv/
+env/
+.streamlit/secrets.toml

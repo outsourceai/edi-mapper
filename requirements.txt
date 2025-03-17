@@ -1,0 +1,9 @@
+streamlit
+pandas
+openai
+python-dotenv
+loguru
+langchain
+langchain-openai
+pydantic
+requests
