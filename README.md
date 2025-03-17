@@ -23,8 +23,8 @@ An AI-powered Streamlit application that converts tabular EDI 944 data to standa
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
-cd edi-mapper-v2
+git clone https://github.com/outsourceai/edi-mapper.git
+
 ```
 
 2. Install the required dependencies:
@@ -37,6 +37,8 @@ pip install -r requirements.txt
 1. Run the application using the provided batch file:
 ```bash
 ./run_app.bat
+OR
+streamlit run app.py
 ```
 
 2. Choose either the main application or the API test tool
@@ -58,30 +60,13 @@ pip install -r requirements.txt
 ## Conversion Types
 
 ### Standard EDI 944 Conversion
-
-The standard conversion follows general EDI 944 specifications with these key segments:
-- ISA: Interchange Control Header
-- GS: Functional Group Header
-- ST: Transaction Set Header (944)
-- W27: Warehouse Receipt Identification
-- LX: Assigned Number
-- W12: Warehouse Item Detail
-- SE: Transaction Set Trailer
-- GE: Functional Group Trailer
-- IEA: Interchange Control Trailer
-
 ### Synapse EDI 944 Conversion
-
-The Synapse conversion creates a custom format specifically designed for Synapse systems:
-- HDR record with 89 fields, containing header information
-- DTL records with 67 fields for each line item
-- Follows the exact field specifications required by Synapse systems
 
 ## Troubleshooting API Key Issues
 
 If you encounter issues with your OpenAI API key:
 
-1. Use the API Test Tool option when starting the application (option 2 in the batch file)
+1. Use the API Test Tool option when starting the application (option 2 in the batch file) or run "streamlit run test_api.py"
 2. Enter your API key and test the connection
 3. Check for any specific error messages
 4. Verify your API key is valid and has available credits
@@ -92,7 +77,6 @@ If you encounter issues with your OpenAI API key:
 - `app.py`: Main entry point for the Streamlit application
 - `run_app.bat`: Batch file to run either the main app or API test tool
 - `test_api.py`: Standalone API key testing tool
-- `direct_test.py`: Alternative API key testing tool
 - `app/`
   - `main.py`: Core Streamlit application logic and UI
   - `config.py`: Configuration and session state management
